@@ -1,0 +1,86 @@
+<mvc:View controllerName="bindings.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content />
+    </Page>
+xmlns="sap.m"
+>   
+<VBox id="id_Vbox" class = "form_Style">
+    <HBox id="id_Hbox">
+        <Label
+            class = "lable_Style" id="id_Label_Name" labelFor="id_Name" text="Student Name"/>
+        <Input
+            id="id_Name" class = "input_Ele" value="{secondModel>/Student/name}" type="Text"
+ placeholder="Student Name"
+            width="25vw"
+        />
+    </HBox>
+    <HBox id="id_Hbox2">
+        <Label
+        class="lable_Style"
+            id="id_Label_Age"
+            labelFor="id_Age"
+            text="Student Age"
+        />
+        <Input
+            id="id_Age"
+            class = "input_Ele"
+            value="{secondModel>/Student/age}"
+            type="Number"
+            placeholder="Student Age"
+            width="25vw"
+        />
+    </HBox>
+    <HBox id="id_Hbox3">
+        <Label
+        class="lable_Style"
+            id="id_Label_HomeTown"
+            labelFor="id_HomeTown"
+            text="Town"
+        />
+        <Input
+            id="id_HomeTown"
+            value="{secondModel>/address/homeTown}"
+            class = "input_Ele"
+            type="Text"
+            placeholder="Home Town"
+            width="25vw"
+        />
+    </HBox>
+    <HBox id="id_Hbox4">
+        <Label class="lable_Style" id="id_Label_State" labelFor="id_HomeTown" text="State"  />
+        <Input id="id_State" type="Text" value="{secondModel>/address/state}" placeholder="State"
+            class = "input_Ele" width="25vw"  />
+       
+    </HBox>
+    <HBox id="id_Hbox5">
+        <Label
+        class="lable_Style"
+            id="id_LabelCountry"
+            labelFor="id_HomeTown"
+            text="Country"
+        />
+        <Input
+            id="id_Country"
+            value="{secondModel>/address/country}"
+            type="Text"
+            placeholder="Country"
+            width="25vw"
+        />
+        
+    </HBox>
+     <!-- <Button
+        id="id_btn1"
+        class="button"
+        text="oMYJSON"
+        press="myJsonModel"
+    />
+    <Button
+        id="id_btn2"
+        type="Default"
+        text="Calculate"
+        press="onClick_Calculate"
+    /> -->
+</VBox>
+</mvc:View>
