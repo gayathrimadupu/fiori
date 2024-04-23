@@ -5,13 +5,67 @@
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.ui.layout.form"
 >   
-
-    <l:VerticalLayout id="idVerticalLayout" binding="{/Actors/0}">
+<!-- element binding  refer this below code  -->
+    <!-- <l:VerticalLayout id="idVerticalLayout" binding="{/Actors/0}">
         <Input id="_IDGenInput1" value="{fName}" editable="true" />
         <Input id="_IDGenInput2" value="{age}" editable="true" />
         <Input id="_IDGenInput3" value="{Born At}" editable="true" />
         <Input id="_IDGenInput4" value="{DOB}" editable="true" />
         <Image id="_IDGenImage1" src="{photo}" />
         <Button id="_IDGenButton1" text="Submit" press="onSubmitData"/>
-    </l:VerticalLayout>
+    </l:VerticalLayout> -->
+    <!-- till here -->
+<!-- aggregation binding below code -->
+    <Table id="_IDGenTable1"
+        items="{/Employee/}"
+        alternateRowColors="true"
+        growing="true"
+        growingThreshold="5"
+        growingScrollToLoad="true"
+
+    >
+        <columns>   <!--DEFINES THE ELEMENTS INSIDE THIS ELEMENT ARE COLOUMS-->
+            <Column id="_IDGenColumn1">     <!--ELEMENT THAT DEFINES WE ARE CREATING A COLUMN-->
+                <header>    <!--TO MAKE THE COLUMN HEADER-->
+                    <Title id="_IDGenTitle1" text="Employee Name" />  <!--NAME OF THE COLUMN-->
+                </header>
+            </Column>
+            <Column id="_IDGenColumn2">
+                <header>
+                    <Title id="_IDGenTitle2" text="Employee DOB" />
+                </header>
+            </Column>
+            <Column id="_IDGenColumn3">
+                <header>
+                    <Title id="_IDGenTitle3" text="Employee Email" />
+                </header>
+            </Column>
+            <Column id="_IDGenColumn4">
+                <header>
+                    <Title id="_IDGenTitle4" text="Employee Gender" />
+                </header>
+            </Column>
+            <Column id="_IDGenColumn5">
+                <header>
+                    <Title id="_IDGenTitle5" text="Mobile No" />
+                </header>
+            </Column>
+            <Column id="_IDGenColumn6">
+                <header>
+                    <Title id="_IDGenTitle6" text="City" />
+                </header>
+            </Column>
+        </columns>
+        <items> <!--TO WRAP THE COLUMN ITEMS (DATA)-->
+            <ColumnListItem id="_IDGenColumnListItem1"> <!--DEFINES LIST THE WE WANT TO DISPLAY-->
+                <Text id="_IDGenText1" text="{fName} {lName}" />
+                <Text id="_IDGenText2" text="{DOB}" />
+                <Text id="_IDGenText3" visible="true" text="{email}" />
+                <Text id="_IDGenText4" text="{gender}" />
+                <Text id="_IDGenText5" visible="false" text="{phone}" />
+                <Text id="_IDGenText6" text="{address/0/city}" />
+
+            </ColumnListItem>
+        </items>
+    </Table>
 </mvc:View>

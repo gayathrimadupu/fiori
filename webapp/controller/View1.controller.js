@@ -9,12 +9,15 @@ sap.ui.define([
         "use strict";
 
         return Controller.extend("elementbinding.controller.View1", {
-            onInit: function () {
+            onInit: function (eve) {
 
-            },
+            }
+            ,
+            // element binding ,in that i have added this button
             onSubmitData: function(){
                 const Actors = this.getView().getModel().getProperty("/Actors/0")
                 console.log(Actors);
              }
+             //till here
         });
     });
