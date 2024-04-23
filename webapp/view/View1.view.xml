@@ -1,0 +1,62 @@
+<mvc:View controllerName="expressionbinding.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+     xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form" >
+    <Page id="page" title="{i18n>title}">
+        <content />
+    </Page>
+    
+>
+    <l:HorizontalLayout id="_IDGenHorizontalLayout1">
+        <l:VerticalLayout
+            id="idVerticalLayout"
+            binding="{/Actors/1}"
+        >
+            <Input id="_IDGenInput1"
+                value="{=${fName}.toUpperCase()}"
+                editable="true"
+            />
+
+            <Input id="_IDGenInput2"
+                value="{age}"
+                editable="{= ${age} > 30 ? false : true }"
+            />
+
+            <Text id="_IDGenText1"
+                text="age only editable if the age is > 10 or > 30 or equal to 54"
+            />
+
+            <Input id="_IDGenInput3"
+                value="{age}"
+                editable="{= ${age} > 10 || ${age} > 30 || ${age} === 54 ? true : false}"
+            />
+
+            <Text id="_IDGenText2"
+                text="age only editable if the age is > 10 AND > 30 AND equal to 53 should satisfy all the conditions"
+            />
+            <Input id="_IDGenInput4"
+                value="{age}"
+                editable="{= ${age} > 10 &amp;&amp; ${age} > 30 &amp;&amp; ${age} === 53 ? true : false}"
+            />
+
+            <Input id="_IDGenInput5"
+                value="{Born At}"
+                editable="true"
+            />
+            <Input id="_IDGenInput6"
+                value="{DOB}"
+                editable="false"
+            />
+            <Button id="_IDGenButton1"
+                text="Submit"
+                press="onSubmitData"
+            />
+        </l:VerticalLayout>
+        <Image id="_IDGenImage1"
+            height="40vh"
+            src="{/Actors/1/photo}"
+        />
+    </l:HorizontalLayout>
+</mvc:View>
+

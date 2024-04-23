@@ -1,0 +1,27 @@
+/* Enter your custom styles here */
+/* .button:hover{
+    color:black;
+    background-color: red;
+    
+} */
+
+.form_Style{
+    margin-left: 30vw;
+    margin-top: 10vh;
+    color: black;
+    background-color: antiquewhite;
+    width: fit-content;
+    height: fit-content;
+    background-size: auto;
+    border-radius: 15px;
+    padding: 20px;
+    
+    
+}
+.lable_Style{
+    padding-left: 30px;
+    color: black;
+}
+.input_Ele{
+    padding-left: 40px;
+}
