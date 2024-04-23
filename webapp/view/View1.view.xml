@@ -1,0 +1,17 @@
+<mvc:View controllerName="elementbinding.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+     displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+>   
+
+    <l:VerticalLayout id="idVerticalLayout" binding="{/Actors/0}">
+        <Input id="_IDGenInput1" value="{fName}" editable="true" />
+        <Input id="_IDGenInput2" value="{age}" editable="true" />
+        <Input id="_IDGenInput3" value="{Born At}" editable="true" />
+        <Input id="_IDGenInput4" value="{DOB}" editable="true" />
+        <Image id="_IDGenImage1" src="{photo}" />
+        <Button id="_IDGenButton1" text="Submit" press="onSubmitData"/>
+    </l:VerticalLayout>
+</mvc:View>
